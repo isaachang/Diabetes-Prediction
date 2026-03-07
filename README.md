@@ -80,7 +80,7 @@ Target Variable: Diabetes
 - The most pronounced difference appears in heart disease status.
 - Individuals with heart disease show a significantly higher diabetes rate compared to those without heart disease. 
 
-# Feature Enginerring
+# Feature Engineering
 
 <img width="1990" height="1089" alt="image" src="https://github.com/user-attachments/assets/7a40f682-0c7b-4e4b-823f-452bf49552c5" />
 
