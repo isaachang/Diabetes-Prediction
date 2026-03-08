@@ -140,21 +140,29 @@ Target Variable: Diabetes
 
 ## Model Comparision
 ### Recall vs. Precision
-<img width="1389" height="589" alt="image" src="https://github.com/user-attachments/assets/c870d003-d597-488d-b7b7-b573c44d47dc" />
+<img width="1389" height="589" alt="Screenshot 2026-03-08 at 15 00 43" src="https://github.com/user-attachments/assets/9df9e524-698a-4d8a-b0fd-2527dc139900" />
 
-- Decision Tree Recall score standout among all other model (92.8%)
-  - Out of every 1,000 diabetic patients, it catches 928 and misses only 72. (Low False Negative)
-- Decision Tree Precision score at 35%
-  - For every 100 patients the Decision Tree flags as diabetic, only 35 actually have diabetes. The other 65 are false alarms. (High False Positive)
+**Decision Tree Recall score standout among all other model (92%)**
+  - Out of every 1,000 diabetic patients, it catches 920 and misses only 72. (Low False Negative)
+- Decision Tree Precision score at 40%
+  - For every 100 patients the Decision Tree flags as diabetic, only 40 actually have diabetes. The other 65 are false alarms. (High False Positive)
+ 
+**Random Forest provide best precision (85%)**
+- When the model flag someone will have diabetes, it right 85% of time (EXPECTED)
+- However, the recall (70%) is lower than decision tree (92%), meaning it misses more diabetic patients
+ 
+
 
 ### Error Rate (FPR vs. FNR)
-<img width="1189" height="589" alt="image" src="https://github.com/user-attachments/assets/800b9303-646d-44bc-817d-579176af120c" />
+<img width="1189" height="589" alt="Screenshot 2026-03-08 at 15 08 54" src="https://github.com/user-attachments/assets/410a4c67-5e2e-443f-857b-e4638bdb0565" />
 
-- Every model that pushes FNR down (catches more diabetic patients).
-- But also pushes FPR up (flags more healthy patients).
+
+- Every model that pushes FNR down (catches more diabetic patients). Except Random Forest
+- Random Forest produces the lowest **False Positive Rate** but **MISSED** 30% **TRUE PATIENT**
+- Other model pushes FPR up (Incoorect flags more healthy patients). But **CATH** more **TRUE PATIENT**
 - We decide to choose Decision Tree because:
   - Easy Interpretation and identified what key factor driving diabetes
-  - Lowest FNR
+  - Minimizing missed diabetic patients (Lowest FNR)
 
 ### Decision Tree Confusion Matrix
 <img width="760" height="590" alt="image" src="https://github.com/user-attachments/assets/76bed726-cd40-4d41-be12-1a4813d88f2d" />
