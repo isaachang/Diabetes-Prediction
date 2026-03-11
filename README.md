@@ -140,21 +140,23 @@ Target Variable: Diabetes
 
 ## Model Comparision
 ### Recall vs. Precision
-<img width="1389" height="589" alt="Screenshot 2026-03-08 at 15 00 43" src="https://github.com/user-attachments/assets/9df9e524-698a-4d8a-b0fd-2527dc139900" />
+<img width="1737" height="932" alt="Screenshot 2026-03-11 at 13 12 42" src="https://github.com/user-attachments/assets/326b5f74-8967-476f-8601-c115dca40bd4" />
+
 
 **Decision Tree Recall score standout among all other model (92%)**
   - Out of every 1,000 diabetic patients, it catches 920 and misses only 72. (Low False Negative)
 - Decision Tree Precision score at 40%
   - For every 100 patients the Decision Tree flags as diabetic, only 40 actually have diabetes. The other 65 are false alarms. (High False Positive)
  
-**Random Forest provide best precision (85%)**
-- When the model flag someone will have diabetes, it right 85% of time (EXPECTED)
-- However, the recall (70%) is lower than decision tree (92%), meaning it misses more diabetic patients
+**Random Forest provide best precision (98%)**
+- When the model flag someone will have diabetes, it right 98% of time (EXPECTED)
+- However, the recall (68%) is lower than decision tree (92%), meaning it misses more diabetic patients
  
 
 
 ### Error Rate (FPR vs. FNR)
-<img width="1189" height="589" alt="Screenshot 2026-03-08 at 15 08 54" src="https://github.com/user-attachments/assets/410a4c67-5e2e-443f-857b-e4638bdb0565" />
+<img width="1735" height="927" alt="Screenshot 2026-03-11 at 13 15 22" src="https://github.com/user-attachments/assets/5eab5269-4ec5-4231-992a-1306510aa705" />
+
 
 
 - Every model that pushes FNR down (catches more diabetic patients). Except Random Forest
