@@ -119,7 +119,7 @@ Target Variable: Diabetes
 
 # Model Building
 ## Objective
-- Build 4 Model for comparision
+- Build 5 Model for comparision
     - Bayesian Logistic Regression
     - Decision Tree
     - Random Forest
