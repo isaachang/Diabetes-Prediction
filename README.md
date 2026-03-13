@@ -120,10 +120,11 @@ Target Variable: Diabetes
 # Model Building
 ## Objective
 - Build 4 Model for comparision
-    - Logistic Regression
+    - Bayesian Logistic Regression
     - Decision Tree
     - Random Forest
     - XGBoost
+    - Naive Bayes
  
 | Priority | Metric | Why |
 |---|---|---|
@@ -142,16 +143,17 @@ Target Variable: Diabetes
 ### Recall vs. Precision
 <img width="1737" height="932" alt="Screenshot 2026-03-11 at 13 12 42" src="https://github.com/user-attachments/assets/326b5f74-8967-476f-8601-c115dca40bd4" />
 
+### Key Findings
+- Decision Tree achieves the highest recall (0.928), making it the most effective at identifying diabetic patients.
+- Random Forest provides the highest precision (0.985), meaning its predictions are very reliable when it flags a patient as diabetic.
+- XGBoost offers a balanced trade-off between recall and precision.
+- Bayesian Logistic Regression shows moderate performance.
+- Naive Bayes performs the weakest overall.
+### Conclusion
+- For a screening task where detecting diabetic patients is the priority
+- Decision Tree performs best due to its high recall.
+- If a more balanced model is required, XGBoost is a strong alternative.
 
-**Decision Tree Recall score standout among all other model (92%)**
-  - Out of every 1,000 diabetic patients, it catches 920 and misses only 72. (Low False Negative)
-- Decision Tree Precision score at 40%
-  - For every 100 patients the Decision Tree flags as diabetic, only 40 actually have diabetes. The other 65 are false alarms. (High False Positive)
- 
-**Random Forest provide best precision (98%)**
-- When the model flag someone will have diabetes, it right 98% of time (EXPECTED)
-- However, the recall (68%) is lower than decision tree (92%), meaning it misses more diabetic patients
- 
 
 
 ### Error Rate (FPR vs. FNR)
